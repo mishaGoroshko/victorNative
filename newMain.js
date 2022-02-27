@@ -21,6 +21,6 @@ const onclickHandler3 = (e) => {
 // sm.onclick = onclickHandler1
 // sm.onclick = onclickHandler2
 
-sm.addEventListener('click', onclickHandler1)
-sm.addEventListener('click', onclickHandler3)
+// sm.addEventListener('click', onclickHandler1)
+// sm.addEventListener('click', onclickHandler2)
 sm.addEventListener('click', onclickHandler3)
