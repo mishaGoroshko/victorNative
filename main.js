@@ -41,7 +41,8 @@ sm.addEventListener('click', superHandler)
 
 const a = document.getElementById('a')
 
-a.addEventListener('click', (e) => {    //не выполнение по умолчанию
-    e.preventDefault()
-    alert('e.preventDefault()')
-})
+a.addEventListener('click', (e) => {
+        e.preventDefault()
+        alert('e.preventDefault()')
+    }
+)

@@ -9,16 +9,16 @@
 //     return factorial;
 // }
 
-//const getFactorial = num => num === 0 ? 1 : getFactorial(num - 1) * num
+// const getFactorial = num => num === 0 ? 1 : getFactorial(num - 1) * num
 
-const getFactorial = num => new Array(num)
-    .fill(undefined)
-    .reduce((factorial, val, index) =>
-        factorial * (index + 1), 1)
-
-console.log(getFactorial(0))
-console.log(getFactorial(3))
-console.log(getFactorial(6))
+// const getFactorial = num => new Array(num)
+//     .fill(undefined)
+//     .reduce((factorial, val, index) =>
+//         factorial * (index + 1), 1)
+//
+// console.log(getFactorial(0))
+// console.log(getFactorial(3))
+// console.log(getFactorial(6))
 
 //2.Найти самое длинное слово в предложении
 
@@ -39,28 +39,28 @@ console.log(getFactorial(6))
 //         .reduce((acc, el) => el.length > acc ? el.length : acc, 0)
 // }
 
-const getMaxWordLength = (sent) => Math.max(...sent.split(" ").map(w => w.length))
-
-console.log(getMaxWordLength("The quick brown fox jumped over the lazy dog"))
-console.log(getMaxWordLength("Hello!"))
+// const getMaxWordLength = (sent) => Math.max(...sent.split(" ").map(w => w.length))
+//
+// console.log(getMaxWordLength("The quick brown fox jumped over the lazy dog"))
+// console.log(getMaxWordLength("Hello!"))
 
 
 // 3. Дан массив с вложенными в него массивами из чисел.
 // Сформировать массив, состоящий из максимальных значений каждого вложенного массива.
 
-const getMaxArrays = (array) => {
-    const result = []
-    for (let i = 0; i < array.length; i++) {
-        let maxArray = 0
-        for (let j = 0; j < array[i].length; j++) {
-            if(array[i][j] > maxArray){
-                maxArray = array[i][j]
-            }
-        }
-        result[i] = maxArray
-    }
-    return result
-}
+// const getMaxArrays = (array) => {
+//     const result = []
+//     for (let i = 0; i < array.length; i++) {
+//         let maxArray = 0
+//         for (let j = 0; j < array[i].length; j++) {
+//             if(array[i][j] > maxArray){
+//                 maxArray = array[i][j]
+//             }
+//         }
+//         result[i] = maxArray
+//     }
+//     return result
+// }
 // const getMaxArrays = (array) => {
 //     const result = []
 //     for (let i = 0; i < array.length; i++) {
@@ -73,23 +73,26 @@ const getMaxArrays = (array) => {
 //     return array.map(arr => Math.max(...arr))
 // }
 
-console.log(getMaxArrays([
-    [4, 5, 1, 3],
-    [13, 27, 18, 26],
-    [32, 35, 37, 39],
-    [1000, 1001, 857, 1]
-]))
+// console.log(getMaxArrays([
+//     [4, 5, 1, 3],
+//     [13, 27, 18, 26],
+//     [32, 35, 37, 39],
+//     [1000, 1001, 857, 1]
+// ]))
 
 // 4.Определить, заканчивается ли строка указанной подстрокой
+
+//                    0123.456 === 7
 // const checkEnding = (str, target) => {
-//     return str.substring(str.length - target.length) === target;
+    //                      7              3    //начиная с 4 индекса будет target
+    // return str.substring(str.length - target.length) === target;
 // }
 
-const checkEnding = (str, target) =>  {
-    return str.slice(-target.length) === target
-}
-
-console.log(checkEnding("Bastian", "n"));
+// const checkEnding = (str, target) =>  {
+//     return str.slice(-target.length) === target
+// }
+//
+// console.log(checkEnding("Bastian", "n"));
 
 //5.Составьте строку из указанного количества повторов данной подстроки
 
@@ -103,18 +106,20 @@ console.log(checkEnding("Bastian", "n"));
 //     return result
 // }
 
-const repeatStringNumTimes = (str, num) => num > 0
-    ? str + repeatStringNumTimes(str, num - 1)
-    : ''
-
-repeatStringNumTimes("abc", 3); // "abcabcabc"
+// const repeatStringNumTimes = (str, num) => num > 0
+//     ? str + repeatStringNumTimes(str, num - 1)
+//     : ''
+//
+// console.log(repeatStringNumTimes("abc", 3));; // "abcabcabc"
 
 // 6.Обрезать строку до указанного количества символов и закончит многоточием
-const  truncateString = (str, num) => {
-   return str.length > num
-       ? `${str.slice(0, num)}...`
-       : str
-}
+// const  truncateString = (str, num) => {
+//    return str.length > num
+//        ? `${str.slice(0, num)}...`
+//        : str
+// }
+// console.log(truncateString('Обрезать строку до указанного', 10))
+
 
 //7. Самодельный find
 function findElement(arr, func) {

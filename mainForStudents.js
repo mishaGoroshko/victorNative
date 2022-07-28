@@ -133,17 +133,24 @@ console.log(ann)
 let bestStudent = students.reduce((acc, el) => el.scores > acc.scores ? el : acc);
 
 // - *не испльзуя методы массивов и Math.max()*
-let bestStudent1;
-let counter = 0
-for (let i = 0; i < students.length - 1; i++) {
-    if (students[i].scores > counter) {
-        counter = students[i].scores
-        bestStudent1 = students[i]
+let bestStudent2 = students[0]
+
+for (let i = 0; i < students.length; i++) {
+    if(students[i].scores > bestStudent2.scores){
+        bestStudent2 = students[i]
     }
 }
-
+// let bestStudent1;
+// let counter = 0
+// for (let i = 0; i < students.length - 1; i++) {
+//     if (students[i].scores > counter) {
+//         counter = students[i].scores
+//         bestStudent1 = students[i]
+//     }
+// }
 
 console.log(bestStudent)
+console.log(bestStudent2)
 
 //13. Найдите сумму баллов всех студентов (reduce)
 const sum = students.reduce((acc, s) => acc + s.scores, 0)
@@ -158,7 +165,7 @@ console.log(scoresSum)
 // значением которого является массив имён всех остальных студентов из массива students,
 // за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
 const addFriends = (students) => {
-    return students.map(el => ({...el, friends: students.map(n => n.name).filter(m=>m !== el.name)}))
+    return students.map(el => ({...el, friends: students.map(n => n.name).filter(m => m !== el.name)}))
 }
 console.log(addFriends(students));
 
