@@ -117,8 +117,12 @@ let namesWithComma = students.map(el => el.name).join(',');   // === join()
 console.log(namesWithComma)
 
 //9. Добавьте всем студентам свойство "isStudent" со значением true (map)
-let trueStudents = students.map(el => !el.isMarried ? {...el, isMarried: true} : el);
-console.log(trueStudents)
+let trueStudents = students.map(el => {
+    delete el.isMarried
+    return {...el, isStudent:true}
+});
+console.log('9', students)
+console.log('9', trueStudents)
 
 //10. Nick женился. Выполните соответствующие преобразование массива students (map)
 let studentsWithMarriedNick = students.map(el => el.name === "Nick" ? {...el, isMarried: true} : el);
